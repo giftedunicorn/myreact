@@ -10,3 +10,7 @@
 3. create .babelrc config file for jsx to js converting
 4. `parcel index.html` to run this little app
 
+# Basic react function
+1. get jsx and convert to virtual dom with createElement
+2. render virtual dom on the real dom
+

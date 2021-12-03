@@ -1,36 +1,37 @@
-// src/index.js
 import React from './react'
 import ReactDOM from './react-dom'
 
-class Welcome extends React.Component {
-    render() {
-        return <h1>Hello, {this.props.name}</h1>;
+class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            num: 0
+        }
     }
-}
 
-class App extends React.Component {
+    componentWillUpdate() {
+        console.log('update');
+    }
+
+    componentWillMount() {
+        console.log('mount');
+    }
+
+    onClick() {
+        this.setState({num: this.state.num + 1});
+    }
+
     render() {
         return (
-            <div>
-                <Welcome name="Sara" />
-                <Welcome name="Cahal" />
-                <Welcome name="Edite" />
-                <div>
-                    <div>home</div>
-                    <div>hello world!</div>
-                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
-                </div>
+            <div onClick={() => this.onClick()}>
+                <h1>number: {this.state.num}</h1>
+                <button>add</button>
             </div>
         );
     }
 }
 
 ReactDOM.render(
-    <App />,
+    <Counter />,
     document.getElementById('root')
 );
-
-/*
-    ReactDOM.render -> _render -> createComponent -> setComponentProps -> renderComponent
-    setState -> renderComponent
-*/

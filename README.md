@@ -15,6 +15,8 @@
 2. render virtual dom on the real dom
 
 # render components
-1. update render function, can handle react function components and class components
-2. add createComponent, setComponentProps, and createComponent
-3. implement react life cycle functions
+1. update render function, render can handle react function components and class components
+2. add createComponent, setComponentProps, and createComponent to handle components
+3. implement react life cycle functions in createComponent, setComponentProps and createComponen
+4. now react will replace all DOM when updating, it's expensive
+

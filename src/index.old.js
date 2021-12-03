@@ -86,15 +86,15 @@ function setAttribute(dom, name, value) {
     }
 }
 
-// const home = (
-//  <div>
-//      <div>home</div>
-//      <div>hello world!</div>
-//      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-//  </div>
-// );
+const home = (
+ <div>
+     <div>home</div>
+     <div>hello world!</div>
+     <h2>It is {new Date().toLocaleTimeString()}.</h2>
+ </div>
+);
 
-// ReactDOM.render(
-//  home,
-//  document.getElementById('root')
-// )
+ReactDOM.render(
+ home,
+ document.getElementById('root')
+)

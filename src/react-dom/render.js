@@ -2,19 +2,19 @@ import Component from '../react/component'
 import { setAttribute } from './dom'
 
 function createComponent(component, props) {
-
-    let inst;
+    let instance;
+    // todo, which one is funciton and which one is class?
     if (component.prototype && component.prototype.render) {
-        inst = new component(props);
+        instance = new component(props);
     } else {
-        inst = new Component(props);
-        inst.constructor = component;
-        inst.render = function() {
+        instance = new Component(props);
+        instance.constructor = component;
+        instance.render = function() {
             return this.constructor(props);
         }
     }
 
-    return inst;
+    return instance;
 }
 
 function unmountComponent(component) {
@@ -23,9 +23,11 @@ function unmountComponent(component) {
 }
 
 function setComponentProps(component, props) {
+    // if view initializing, componentWillMount is called
     if (!component.base) {
         if (component.componentWillMount) component.componentWillMount();
     } else if (component.componentWillReceiveProps) {
+        // if view updating, componentWillReceiveProps is called, pass props
         component.componentWillReceiveProps(props);
     }
 
@@ -37,18 +39,22 @@ export function renderComponent(component) {
     let base;
     const renderer = component.render();
 
+    // if view updating, componentWillUpdate is called
     if (component.base && component.componentWillUpdate) {
         component.componentWillUpdate();
     }
 
     base = _render(renderer);
 
+    // if view updating, componentDidUpdate is called
     if (component.base) {
         if (component.componentDidUpdate) component.componentDidUpdate();
     } else if (component.componentDidMount) {
+        // if view initializing, componentDidMount is called
         component.componentDidMount();
     }
 
+    // replace the view
     if (component.base && component.base.parentNode) {
         component.base.parentNode.replaceChild(base, component.base);
     }
@@ -94,6 +100,6 @@ function _render(vnode) {
 }
 
 export function render(vnode, container) {
-    console.log(vnode)
+    // console.log(vnode)
     return container.appendChild(_render(vnode));
 }

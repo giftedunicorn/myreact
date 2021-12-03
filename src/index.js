@@ -15,11 +15,22 @@ class App extends React.Component {
                 <Welcome name="Sara" />
                 <Welcome name="Cahal" />
                 <Welcome name="Edite" />
+                <div>
+                    <div>home</div>
+                    <div>hello world!</div>
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
             </div>
         );
     }
 }
+
 ReactDOM.render(
     <App />,
-    document.getElementById( 'root' )
+    document.getElementById('root')
 );
+
+/*
+    ReactDOM.render -> _render -> createComponent -> setComponentProps -> renderComponent
+    setState -> renderComponent
+*/

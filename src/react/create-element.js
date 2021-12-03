@@ -1,7 +1,7 @@
 import Component from './component.js'
-
-function createElement( tag, attrs, ...children ) {
-
+	
+// make vitual DOM from jsx
+function createElement(tag, attrs, ...children) {
     return {
         tag,
         attrs,

@@ -5,6 +5,7 @@ const renderQueue = [] // store the component will be updated
 
 function defer(fn) {
 	// execute flush after all sync functions
+	// return requestAnimationFrame(fn) // or requestIdleCallback(fn)
 	return Promise.resolve().then(fn)
 }
 

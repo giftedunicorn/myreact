@@ -20,3 +20,7 @@
 3. implement react life cycle functions in createComponent, setComponentProps and createComponen
 4. now react will replace all DOM when updating, it's expensive
 
+# react diff
+1. Find the changes in virtual dom and only updates the real dom with the difference for better performance.
+2. Compare between the real dom and the virtual dom. React will compare the new virtual dom and old virtual dom, find changes and update the real dom with the patches.
+3. compare and update at same time

@@ -2,10 +2,14 @@ import Component from './component.js'
 	
 // make vitual DOM from jsx
 function createElement(tag, attrs, ...children) {
+
+	attrs = attrs || {};
+	
     return {
         tag,
         attrs,
-        children
+        children,
+        key: attrs.key || null
     }
 }
 

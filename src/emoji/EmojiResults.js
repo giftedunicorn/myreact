@@ -19,15 +19,33 @@ export default class EmojiResults extends React.Component {
   }
 
   render() {
+    // this.props.emojiData.map will return undefined component
     return (
       <div className="component-emoji-results">
-        {this.props.emojiData.map(emojiData => (
-          <EmojiResultRow
-            key={emojiData.title}
-            symbol={emojiData.symbol}
-            title={emojiData.title}
+        {/* <EmojiResultRow
+            key={this.props.emojiData[0].title}
+            symbol={this.props.emojiData[0].symbol}
+            title={this.props.emojiData[0].title}
           />
-        ))}
+          <EmojiResultRow
+            key={this.props.emojiData[1].title}
+            symbol={this.props.emojiData[1].symbol}
+            title={this.props.emojiData[1].title}
+          />
+          <EmojiResultRow
+            key={this.props.emojiData[2].title}
+            symbol={this.props.emojiData[2].symbol}
+            title={this.props.emojiData[2].title}
+          />*/}
+        <div className="component-emoji-results">
+          {this.props.emojiData.map((item) => {
+            return <EmojiResultRow
+              key={item.title}
+              symbol={item.symbol}
+              title={item.title}
+            />
+          })}
+        </div>
       </div>
     );
   }

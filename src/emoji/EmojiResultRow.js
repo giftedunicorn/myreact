@@ -1,4 +1,4 @@
-import React from "../../react/react";
+import React from "../../myreact/react";
 // import PropTypes from "prop-types";
 import "./EmojiResultRow.css";
 

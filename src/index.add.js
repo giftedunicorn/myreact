@@ -1,5 +1,5 @@
-import React from '../react/react'
-import ReactDOM from '../react/react-dom'
+import React from '../myreact/react'
+import ReactDOM from '../myreact/react-dom'
 
 class Counter extends React.Component {
     constructor(props) {

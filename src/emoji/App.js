@@ -1,4 +1,4 @@
-import React from "../../react/react";
+import React from "../../myreact/react";
 import Header from "./Header";
 import SearchInput from "./SearchInput";
 import EmojiResults from "./EmojiResults";

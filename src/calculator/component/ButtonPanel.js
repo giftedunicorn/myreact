@@ -1,4 +1,4 @@
-import React from "../../../react/react";
+import React from "../../../myreact/react";
 import Button from "./Button";
 // import PropTypes from "prop-types";
 

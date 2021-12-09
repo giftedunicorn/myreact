@@ -1,6 +1,6 @@
 // src/index.js
-import React from '../react/react'
-import ReactDOM from '../react/react-dom'
+import React from '../myreact/react'
+import ReactDOM from '../myreact/react-dom'
 
 class Welcome extends React.Component {
     render() {

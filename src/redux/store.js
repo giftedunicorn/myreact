@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from "../myredux/index.js";
+import { createStore, combineReducers, applyMiddleware } from "../../myredux/index.js";
 import counterReducer from "./reducers/counter.js";
 import infoReducer from "./reducers/info.js";
 import timeMiddleware from "./middlewares/timeMiddleware.js";

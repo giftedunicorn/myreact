@@ -1,4 +1,4 @@
-import React from '../react-fiber';
+import React from '../myreactfiber';
 const ReactDOM = React;
 
 function Count3() {

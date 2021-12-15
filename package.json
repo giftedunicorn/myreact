@@ -4,7 +4,8 @@
   "description": "simple react",
   "main": "dist/react.js",
   "scripts": {
-    "start": "parcel ./index.html"
+    "start": "parcel ./index.html",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1"
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
     "big.js": "^6.1.1",

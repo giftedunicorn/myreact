@@ -29,3 +29,7 @@
 2. Push all stateChange and component to queue. Push the component to render queue only once. Remove dups.
 3. Create flush function to execute stateChange in queue and render component
 4. Run flush function after all sync function. Defer flush with promise or setTimeout(0)
+
+# react fiber
+https://segmentfault.com/a/1190000022995622
+

@@ -4,7 +4,8 @@
   "description": "simple react",
   "main": "dist/react.js",
   "scripts": {
-    "start": "parcel ./index.html",
+    "start": "webpack-dev-server --open --hot --mode development",
+    "parcel": "parcel ./public/index.html",
     "build": "webpack --config webpack.config.js"
   },
   "repository": {

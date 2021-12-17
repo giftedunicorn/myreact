@@ -43,7 +43,15 @@ export default class ButtonPanel extends React.Component {
         <div>
           <Button name="0" clickHandler={this.handleClick} wide />
           <Button name="." clickHandler={this.handleClick} />
-          <Button name="=" clickHandler={this.handleClick} orange />
+          <Button name="=" clickHandler={() => {
+            import(/* webpackChunkName: "print" */ '../logic/print').then(module => {
+              // lazy load print.js
+              const print = module.default;
+              print();
+            });
+
+            this.handleClick()
+          }} orange />
         </div>
       </div>
     );

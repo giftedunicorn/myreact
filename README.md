@@ -66,3 +66,14 @@
 * mini-css-extract-plugin: extract css code from bundle.js as seperate style file and inject into index.html
 
 
+# WEBPACK OPTIMIZATION
+
+* happypack and thread-loader: run bundle job in worker pool. Now we should use thread-loader since happypack is inactive.
+
+* lazy loading: the print.js file will be lazy-loading. Only load the splited print.js bundle when = button is clicked. 
+
+* tree shaking: prune code if unused.
+
+* cache: add [contenthash] to the output file. it helps the web server and browser caching.
+
+* code splitting: Split code for multiple entry. Extract common dependencies into an existing entry chunk or an entirely new chunk

@@ -1,6 +1,5 @@
 # HOW TO CREATE A REACT
 
-### https://segmentfault.com/a/1190000020034137
 ### https://github.com/hujiulong/blog/issues/4
 
 ## Prepare works
